@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build and push the image
         run: |
-          docker login --username vaishnaviv1105 --password $ {{secrets.GHCR_PAT }} ghcr.io
+          docker login --username vaishnaviv1105 --password ${{secrets.GHCR_PAT }} ghcr.io
           docker build . -t ghcr.io/vaishnaviv1105/week21:latest
           docker push ghcr.io/vaishnaviv1105/week21:latest
           
